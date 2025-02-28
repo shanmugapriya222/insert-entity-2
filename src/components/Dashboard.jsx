@@ -32,17 +32,17 @@ const Dashboard = () => {
   ]);
 
   return (
-    <div className="dashboard">
-      <header className="dashboard-header">
-        <h1>Movie Collection</h1>
-      </header>
-      <div className="movie-list">
-        {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </div>
+    <div>
+    <h1>Movie Collection</h1>
+    <button onClick={() => navigate('/add-movie')}>Add Movie</button>
+    <div>
+      {movies.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
+      ))}
     </div>
-  );
+  </div>
+);
 };
+
 
 export default Dashboard;
